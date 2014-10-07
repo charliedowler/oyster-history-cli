@@ -1,0 +1,24 @@
+{
+  "name": "node-oyster-history-cli",
+  "version": "0.1.0",
+  "description": "Cli get oyster card travel history",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/charliedowler/node-oyster-history-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "oyster",
+    "tfl"
+  ],
+  "author": "charliedowler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charliedowler/node-oyster-history-cli/issues"
+  },
+  "homepage": "https://github.com/charliedowler/node-oyster-history-cli"
+}
