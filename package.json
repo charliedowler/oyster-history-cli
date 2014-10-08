@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/charliedowler/node-oyster-history-cli/issues"
   },
-  "homepage": "https://github.com/charliedowler/node-oyster-history-cli"
+  "homepage": "https://github.com/charliedowler/node-oyster-history-cli",
+  "dependencies": {
+    "node-oyster-history": "^0.1.0"
+  },
+  "bin": {
+    "oyster-history": "./cli.js"
+  }
 }
