@@ -25,7 +25,8 @@
     "node-oyster-history": "^0.1.0",
     "chalk": "^0.5.1",
     "minimist": "^1.1.0",
-    "prompt": "^0.2.14"
+    "prompt": "^0.2.14",
+    "underscore": "^1.7.0"
   },
   "bin": {
     "oyster-history": "./cli.js"
