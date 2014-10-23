@@ -1,5 +1,5 @@
 {
-  "name": "node-oyster-history-cli",
+  "name": "oyster-history-cli",
   "version": "0.1.0",
   "description": "Cli get oyster card travel history",
   "main": "cli.js",
