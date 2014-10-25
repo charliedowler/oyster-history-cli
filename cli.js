@@ -14,8 +14,9 @@ function printResult(err, history) {
     history = _.groupBy(history, function(trip) { return trip.date.substr(0, trip.date.length - 6)});
     for (date in history) {
       console.log(chalk.cyan(date));
-      for (trip in history[date]) {
-        var route = history[date][trip];
+      var trips = history[date].reverse();
+      for (trip in trips) {
+        var route = trips[trip];
         console.log(chalk.white(route.journey + ' => ') + (/\+/.test(route.charge) ? chalk.green(route.charge) : chalk.red('-' + route.charge)));
       }
       console.log('----------');
