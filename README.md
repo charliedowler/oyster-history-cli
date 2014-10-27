@@ -11,3 +11,5 @@ $ npm install --global oyster-history-cli
 ```sh
 $ oyster-history -u username -p password
 ```
+
+![Screenshot of oyster-history-cli](screenshot.png)
