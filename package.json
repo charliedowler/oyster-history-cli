@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/charliedowler/node-oyster-history-cli.git"
+    "url": "git://github.com/charliedowler/oyster-history-cli.git"
   },
   "keywords": [
     "cli",
@@ -18,11 +18,11 @@
   "author": "charliedowler",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/charliedowler/node-oyster-history-cli/issues"
+    "url": "https://github.com/charliedowler/oyster-history-cli/issues"
   },
-  "homepage": "https://github.com/charliedowler/node-oyster-history-cli",
+  "homepage": "https://github.com/charliedowler/oyster-history-cli",
   "dependencies": {
-    "node-oyster-history": "^0.1.0",
+    "oyster-history": "^0.1.0",
     "chalk": "^0.5.1",
     "minimist": "^1.1.0",
     "prompt": "^0.2.14",

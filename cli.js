@@ -4,7 +4,7 @@ var chalk = require('chalk');
 var _ = require('underscore');
 var prompt = require('prompt');
 var argv = require('minimist')(process.argv.slice(2));
-var TravelHistory = require('node-oyster-history');
+var TravelHistory = require('oyster-history');
 
 function printResult(err, history) {
   if (err) throw new Error(err);
