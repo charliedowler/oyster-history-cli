@@ -5,9 +5,13 @@ var _ = require('underscore');
 var prompt = require('prompt');
 var argv = require('minimist')(process.argv.slice(2));
 var TravelHistory = require('oyster-history');
+var Spinner = require('cli-spinner').Spinner;
+var spinner = new Spinner();
+spinner.setSpinnerString('|/-\\');
 
 function printResult(err, history) {
   if (err) throw new Error(err);
+  spinner.stop();
 
   if (history.length > 0) {
     // Print nice format
@@ -29,6 +33,7 @@ function printResult(err, history) {
 }
 
 if (argv.u && argv.p) {
+  spinner.start();
   TravelHistory(argv.u, argv.p, printResult);
 }
 else {
@@ -45,6 +50,7 @@ else {
       }
     }
   }, function (err, result) {
+    spinner.start();
     TravelHistory(result.username, result.password, printResult);
   });
 }
