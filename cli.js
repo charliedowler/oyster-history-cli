@@ -13,9 +13,14 @@ function printResult(err, history) {
   if (err) throw new Error(err);
   spinner.stop();
 
+  //Clear spinner, waiting on a PR to resolve this.
+  process.stdout.clearLine();
+  console.log('');
+
   if (history.length > 0) {
-    // Print nice format
-    history = _.groupBy(history, function(trip) { return trip.date.substr(0, trip.date.length - 6)});
+    history = _.groupBy(history, function(trip) {
+      return trip.date.match(/\w*, \w{2} \w* \w{4}/i)
+    });
     for (date in history) {
       console.log(chalk.cyan(date));
       var trips = history[date].reverse();
@@ -25,8 +30,7 @@ function printResult(err, history) {
       }
       console.log('----------');
     }
-  }
-  else {
+  } else {
     console.log(chalk.red('\nNo oyster history available, if you\'ve travelled recently it may take 24 hours for it to become available.'));
   }
   process.exit(0);
@@ -35,8 +39,7 @@ function printResult(err, history) {
 if (argv.u && argv.p) {
   spinner.start();
   TravelHistory(argv.u, argv.p, printResult);
-}
-else {
+} else {
   prompt.start();
 
   prompt.get({
@@ -49,7 +52,7 @@ else {
         required: true
       }
     }
-  }, function (err, result) {
+  }, function(err, result) {
     spinner.start();
     TravelHistory(result.username, result.password, printResult);
   });
