@@ -23,7 +23,7 @@ function printResult(err, history) {
     });
     for (date in history) {
       console.log(chalk.cyan(date));
-      var trips = history[date].reverse();
+      var trips = history[date];
       for (trip in trips) {
         var route = trips[trip];
         console.log(chalk.white(route.journey + ' => ') + (/\+/.test(route.charge) ? chalk.green(route.charge) : chalk.red('-' + route.charge)));
