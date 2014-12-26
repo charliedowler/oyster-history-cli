@@ -11,10 +11,7 @@ spinner.setSpinnerString('|/-\\');
 
 function printResult(err, history) {
   if (err) throw new Error(err);
-  spinner.stop();
-
-  //Clear spinner, waiting on a PR to resolve this.
-  process.stdout.clearLine();
+  spinner.stop(true);
   console.log('');
 
   if (history.length > 0) {
