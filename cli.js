@@ -7,7 +7,6 @@ var argv = require('minimist')(process.argv.slice(2));
 var TravelHistory = require('oyster-history');
 var Spinner = require('cli-spinner').Spinner;
 var spinner = new Spinner();
-spinner.setSpinnerString('|/-\\');
 
 function printResult(err, history) {
   if (err) throw new Error(err);
@@ -21,10 +20,9 @@ function printResult(err, history) {
     for (date in history) {
       console.log(chalk.cyan(date));
       var trips = history[date];
-      for (trip in trips) {
-        var route = trips[trip];
+      trips.forEach(function(route) {
         console.log(chalk.white(route.journey + ' => ') + (/\+/.test(route.charge) ? chalk.green(route.charge) : chalk.red('-' + route.charge)));
-      }
+      });
       console.log('----------');
     }
   } else {
