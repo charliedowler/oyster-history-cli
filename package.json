@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/charliedowler/oyster-history-cli",
   "dependencies": {
-    "oyster-history": "^0.1.0",
-    "chalk": "^0.5.1",
-    "minimist": "^1.1.0",
-    "prompt": "^0.2.14",
-    "underscore": "^1.7.0",
-    "cli-spinner": "^0.1.6"
+    "oyster-history": "~0.1.1",
+    "chalk": "~0.5.1",
+    "minimist": "~1.1.0",
+    "prompt": "~0.2.14",
+    "underscore": "~1.7.0",
+    "cli-spinner": "~0.1.6"
   },
   "bin": {
     "oyster-history": "./cli.js"
