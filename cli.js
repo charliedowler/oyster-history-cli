@@ -3,10 +3,17 @@
 var chalk = require('chalk');
 var _ = require('underscore');
 var prompt = require('prompt');
-var argv = require('minimist')(process.argv.slice(2));
-var TravelHistory = require('oyster-history');
 var Spinner = require('cli-spinner').Spinner;
+var TravelHistory = require('oyster-history');
+var updateNotifier = require('update-notifier');
+var argv = require('minimist')(process.argv.slice(2));
+
 var spinner = new Spinner();
+
+updateNotifier({
+  packageName: pkg.name,
+  packageVersion: pkg.version
+}).notify();
 
 function printResult(err, history) {
   if (err) throw new Error(err);
